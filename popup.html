@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./popup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    #productTable img {
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="card" id="progress_bar">
+          <div class="card-body">
+            <div class="spinner-border text-primary" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+            <strong>Please Wait Your Process is working...</strong>
+            <div id="progress-container">
+              <div id="progress-bar" class="progress-bar-striped">
+                <div id="stripes"></div>
+              </div>
+              <div id="percentage">0%</div>
+            </div>
+          </div>
+        </div>
+        <div class="card" id="view_data">
+          <div class="card-body">
+            <div class="card-title">
+              <h5 class="mb-0">Scrapping Data form the <span id="tab_title"></span></h5>
+            </div>
+            <hr />
+            <div class="table-responsive">
+              <button id="downloadCsvButton" class="btn btn-success text-white"><i class="fas fa-file-csv"></i> Download
+                CSV</button>
+              <table id="productTable" class="table table-striped table-bordered mt-3" style="width: 100%">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Title</th>
+                    <th>Features</th>
+                    <th>Description Title</th>
+                    <th>Description</th>
+                    <th>Location</th>
+                    <th>Characterists</th>
+                    <th>Images</th>
+                  </tr>
+                </thead>
+                <tbody id="view">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <!-- <script src="./script.js"></script> -->
+</body>
+
+</html>

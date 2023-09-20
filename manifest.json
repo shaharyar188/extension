@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Product Scrapper",
+    "description": "Scrape the Products form the different Web Pages",
+    "version": "1.0",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs",
+        "scripting"
+    ]
+}
