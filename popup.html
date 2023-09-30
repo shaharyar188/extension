@@ -14,6 +14,40 @@
     #productTable img {
       display: inline-block;
     }
+
+    #login-form h1 {
+      font-family: 'KaTeX_AMS';
+    }
+
+    .badge {
+      background-color: #f8d7da;
+      padding: 15px;
+      color: black;
+      font-size: 13px;
+    }
+
+
+    #login-form label {
+      font-weight: 500;
+    }
+
+    #login-form input {
+      width: 300px;
+      height: 35px;
+      text-indent: 5px;
+      border-radius: 5px;
+      border: 1px solid lightgray;
+    }
+
+    #login-form button {
+      font-weight: 600;
+      color: white;
+      background-color: #0f0f4d;
+      margin-top: 18px;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 21px;
+    }
   </style>
 </head>
 
@@ -21,7 +55,24 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <div class="card" id="progress_bar">
+        <div class="card" id="login-card">
+          <div class="card-body">
+            <span class="badge" id="error_message" style="display: none;">Oops ! Invalid login credentials. Please try again. !</span>
+            <h2>Login for Access the Products</h2>
+            <form id="login-form">
+              <label for="">Enter Email</label>
+              <br>
+              <input type="email" id="username" placeholder="Email" required>
+              <br>
+              <label for="">Enter Password</label>
+              <br>
+              <input type="password" id="password" placeholder="Password" required>
+              <br>
+              <button type="submit">Login</button>
+            </form>
+          </div>
+        </div>
+        <div class="card" id="progress_bar" style="display:none;">
           <div class="card-body">
             <div class="spinner-border text-primary" role="status">
               <span class="visually-hidden">Loading...</span>
@@ -35,7 +86,7 @@
             </div>
           </div>
         </div>
-        <div class="card" id="view_data">
+        <div class="card" id="view_data" style="display: none;">
           <div class="card-body">
             <div class="card-title">
               <h5 class="mb-0">Scrapping Data form the <span id="tab_title"></span></h5>
